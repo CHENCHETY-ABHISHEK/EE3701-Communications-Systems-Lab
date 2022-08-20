@@ -1,2 +1,4 @@
 *.exe
 *.pdf
+mainn.c
+.vscode
