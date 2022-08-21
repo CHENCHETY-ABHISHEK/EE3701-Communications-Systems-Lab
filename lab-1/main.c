@@ -35,7 +35,7 @@ int main()
 
     int y1_size = sizeof(y1) / sizeof(double);
 
-    double R[x_size+y_size-1];
+    double R[x_size+y1_size-1];
 
     Correlation(x, y1, R, x_size, y1_size);
 
