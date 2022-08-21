@@ -35,7 +35,7 @@ int main()
 
     int y1_size = sizeof(y1) / sizeof(double);
 
-    double R[x_size];
+    double R[x_size+y_size-1];
 
     Correlation(x, y1, R, x_size, y1_size);
 
@@ -47,12 +47,12 @@ int main()
         exit(1);
     }
     fprintf(fptr1, "R[n] = {");
-    for (int i = 0; i < x_size - 1; i++)
+    for (int i = 0; i < x_size +y1_size - 2; i++)
     {
         fprintf(fptr1, "%lf", R[i]);
         fprintf(fptr1, ", ");
     }
-    fprintf(fptr1, "%lf };", R[x_size - 1]);
+    fprintf(fptr1, "%lf };", R[x_size+y1_size - 2]);
     fclose(fptr1);
 
     // *-------------------------------------------------------------------- Downsampling------------------------------------------------------------

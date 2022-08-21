@@ -38,7 +38,7 @@ void Correlation(double *x, double *y, double *R, int x_size, int y_size)
     // * Convolving the Reversed y and x to get correlation
     double product;
 
-    int R_size = x_size + y_size;
+    int R_size = x_size + y_size-1;
     // * Running a loop for evaluating sequence R[n]
     for (int n = 0; n < R_size; n++)
     {
